@@ -1,0 +1,91 @@
+body {
+    background-image: url("img/bg.png");
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+table.field {
+    /* border-collapse: collapse; */
+    margin: 15px auto;
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+.cell {
+    position: relative;
+    padding: 0;
+    width: 135px;
+    height: 135px;
+    box-sizing: border-box;
+    text-align: center;
+    box-sizing: border-box;
+    transition: 1s;
+    transform-style: preserve-3d;  
+}
+.cell.flipped {
+    transform: rotateY(180deg);
+}
+.cell img {
+    width: 128px;
+    height: 128px;
+    filter: invert(100%);
+    margin-top: 4px;
+}
+
+.cell .front, .cell .back {
+    position: absolute;
+    top: 0;
+    width: 135px;
+    height: 135px;
+    background: #0a327b;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+.cell .front {
+    background: url("img/pattern.png")
+}
+.cell .back {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+button {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 3px;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    background-color: royalblue;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:active, button:focus {
+    outline: none;
+}
+
+button:active {
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+    transform: translateY(2px);
+}
+
+.copy {
+    text-align: center;
+    font-size: .7rem;
+}
+.copy a {
+    color: #a9a9a9;
+}
